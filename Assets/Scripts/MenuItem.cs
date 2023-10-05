@@ -1,20 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using System;
 using UnityEngine;
 
+[Serializable]
 public class MenuItem : MonoBehaviour
 {
-    //[SerializeField] private TextMeshPro _textField;
-    [SerializeField]
-    public void Initialize()
-    {
-        Instantiate(GameObject.FindGameObjectWithTag("Cube"));
-    }
-    [SerializeField]
-    public void Destroyed()
-    {
-        Destroy(GameObject.FindGameObjectWithTag("Cube"));
-    }
-    
+    [field: SerializeField] public string ID { get; private set; }
+    [field: SerializeField] public string Title { get; private set; }
 }
