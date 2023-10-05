@@ -656,7 +656,9 @@ PlayerSettings:
   platformCapabilities:
     WindowsStoreApps:
       SpatialPerception: True
+      InternetClient: True
       WebCam: True
+      Microphone: True
   metroTargetDeviceFamilies: {}
   metroFTAName: 
   metroFTAFileTypes: []
