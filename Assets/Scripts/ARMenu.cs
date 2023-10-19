@@ -14,6 +14,8 @@ public partial class ARMenu : MonoBehaviour
 
     [SerializeField] private GridObjectCollection _gridObjectCollection;
 
+    [SerializeField] private ClippingBox clippingBox;
+
     [SerializeField] private PlayerMoney _playerMoney;
 
     private void Start()
@@ -25,6 +27,7 @@ public partial class ARMenu : MonoBehaviour
     {
         for(int i = 0; i < _root.childCount; i++)
         {
+            clippingBox.ClearRenderers();
             Destroy(_root.GetChild(i).gameObject);
         }
         foreach (var itemsConfigItem in _itemsConfig.Items)
@@ -34,7 +37,7 @@ public partial class ARMenu : MonoBehaviour
                 continue;
             }
             var button = Instantiate(_buttonPrefab,_root);
-
+            foreach (var renderer in button.GetComponentsInChildren<Renderer>()) clippingBox.AddRenderer(renderer);
             if(button.TryGetComponent(out ArButton arButton))
             {
                 arButton.Initialize(itemsConfigItem);
