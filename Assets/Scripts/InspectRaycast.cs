@@ -1,3 +1,4 @@
+using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,5 +61,10 @@ public class InspectRaycast : MonoBehaviour
             crosshair.color = Color.white;
             isCrosshairActive = false;
         }
+    }
+
+    public void InteractWithObject(ManipulationEventData data)
+    {
+        raycastedObj.ShowExtraInfo();
     }
 }
