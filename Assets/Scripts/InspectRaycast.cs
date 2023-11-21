@@ -36,8 +36,10 @@ public class InspectRaycast : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     raycastedObj.ShowExtraInfo();
+                    raycastedObj.ShowObjectName();
                 }
             }
+
         }
         else
         {
@@ -48,21 +50,21 @@ public class InspectRaycast : MonoBehaviour
                 doOnce = false;
             }
         }
-    }
 
-    void CrosshairChange(bool on)
-    {
-        if (on && doOnce)
+
+        void CrosshairChange(bool on)
         {
-            crosshair.color = Color.red;
-        }
-        else
-        {
-            crosshair.color = Color.white;
-            isCrosshairActive = false;
+            if (on && doOnce)
+            {
+                crosshair.color = Color.red;
+            }
+            else
+            {
+                crosshair.color = Color.white;
+                isCrosshairActive = false;
+            }
         }
     }
-
     public void InteractWithObject(ManipulationEventData data)
     {
         raycastedObj.ShowExtraInfo();
