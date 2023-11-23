@@ -4960,7 +4960,7 @@ MonoBehaviour:
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 9179902}
+  constraintsManager: {fileID: 439082498}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -6512,7 +6512,7 @@ Transform:
   m_GameObject: {fileID: 583093812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.611, y: 1.904, z: 1.34}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9914,7 +9914,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.611, y: -1.904, z: -1.34}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13413,7 +13413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8080c0559be16449c7ad95b3459390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: "\u041F\u0443\u0441\u0442\u0430\u044F \u043A\u0430\u0440\u0442\u0430"
   itemextraInfo: 
   inspectController: {fileID: 875703645}
 --- !u!1 &1303404784 stripped
@@ -20460,7 +20460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1892359138
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20542,7 +20542,7 @@ Transform:
   m_GameObject: {fileID: 1892359137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.99, y: -0.79, z: 2.2}
+  m_LocalPosition: {x: 0.99, y: 1.498, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29019,7 +29019,7 @@ Transform:
   m_GameObject: {fileID: 6588737477090096433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.574, y: 1.437, z: 0.132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29432,15 +29432,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1514151
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.821
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3389997
+      value: 1.037
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalRotation.w
