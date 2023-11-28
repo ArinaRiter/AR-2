@@ -1,3 +1,4 @@
+using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
@@ -13,8 +14,6 @@ public class CardsMixed : MonoBehaviour
         {
             int j = Random.Range(0, gameObject.transform.childCount - 1);
             (gameObject.transform.GetChild(i).position,gameObject.transform.GetChild(j).position) = (gameObject.transform.GetChild(j).position, gameObject.transform.GetChild(i).position);
-        }
-      
+        }    
     }
-
 }
