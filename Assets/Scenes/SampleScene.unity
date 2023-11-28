@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4005,6 +4005,11 @@ MonoBehaviour:
   itemName: "\u041F\u0438\u043A\u043E\u0432\u044B\u0439 \u0412\u0430\u043B\u0435\u0442"
   itemextraInfo: 
   inspectController: {fileID: 875703645}
+--- !u!1 &339442334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2814985783954281440, guid: 66cb745a60dfb4f4081512392f0362a5, type: 3}
+  m_PrefabInstance: {fileID: 1886951361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &391847466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6977830635412270081, guid: 6a83e97a17b2ad841aab5a65719e9cee, type: 3}
@@ -14036,7 +14041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 0}
+  hostTransform: {fileID: 1331079958}
   manipulationType: 3
   twoHandedManipulationType: 7
   allowFarManipulation: 1
@@ -14053,7 +14058,7 @@ MonoBehaviour:
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 1479230499}
+  constraintsManager: {fileID: 1331079955}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -15069,6 +15074,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6952692003548654802, guid: 66cb745a60dfb4f4081512392f0362a5, type: 3}
   m_PrefabInstance: {fileID: 1886951361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496983612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339442334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cff53737dfdc4d479360af0ae6c56e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512164962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8130715101036534051, guid: 66cb745a60dfb4f4081512392f0362a5, type: 3}
@@ -16175,7 +16192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 0}
+  hostTransform: {fileID: 1702713485}
   manipulationType: 3
   twoHandedManipulationType: 7
   allowFarManipulation: 1
@@ -16192,7 +16209,7 @@ MonoBehaviour:
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 1479230499}
+  constraintsManager: {fileID: 1702713482}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -19199,6 +19216,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2814985783954281440, guid: 66cb745a60dfb4f4081512392f0362a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1496983612}
     - targetCorrespondingSourceObject: {fileID: 2428938046168249839, guid: 66cb745a60dfb4f4081512392f0362a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1297510483}
@@ -29019,7 +29039,7 @@ Transform:
   m_GameObject: {fileID: 6588737477090096433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.574, y: 1.437, z: 0.132}
+  m_LocalPosition: {x: -0.749, y: 1.237, z: 1.124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29432,15 +29452,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.065
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.037
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 6723429383348952266, guid: 8e5a9ad116c83b148bf0b0ef1da5f8c3, type: 3}
       propertyPath: m_LocalRotation.w

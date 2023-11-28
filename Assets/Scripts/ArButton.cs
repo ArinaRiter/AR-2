@@ -26,8 +26,8 @@ using UnityEngine;
         private void ProccessClick()
         {
             Instantiate(_prefab);
-            Vector3 pos = new Vector3(1.3f, 0.28f, 2f);
-            _prefab.transform.position = pos;
+            //Vector3 pos = new Vector3(1.3f, 0.28f, 2f);
+            //_prefab.transform.position = pos;
             OnButtonClicked?.Invoke();
         }
     }

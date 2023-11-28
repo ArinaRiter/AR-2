@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - Title: Chip Black
-    Prefab: {fileID: 2612930645372953523, guid: e46d7ff8065ac294ba78e4ef3f301574, type: 3}
+    Prefab: {fileID: 2458751716495976837, guid: cce1f27570ae1a242b9982aae3e95bdf, type: 3}
     Price: 100
   - Title: Chip Blue
-    Prefab: {fileID: 6356449428291191532, guid: 4613b60a34e937a4eb04153798168504, type: 3}
+    Prefab: {fileID: 1676770753893870124, guid: 5e7ed72b37013b542bd8a459d51df1c9, type: 3}
     Price: 500
   - Title: Chip Green
-    Prefab: {fileID: 8947752950716321821, guid: 73cc4fe0ac751cf4caabf4385228e596, type: 3}
+    Prefab: {fileID: 458685699012684317, guid: 83a9014497a035c44a6e8361d16f4611, type: 3}
     Price: 1000
   - Title: Chip Red
-    Prefab: {fileID: 4758771737456098294, guid: 59f2baac1d37b2a43a38a67524092926, type: 3}
+    Prefab: {fileID: 2992418017200020491, guid: b0418149ef11cae47b69963baf26d7a0, type: 3}
     Price: 5000
   - Title: Chip White
-    Prefab: {fileID: 204430026767780912, guid: f877c8176ba23c347ab33e3c4d47fb24, type: 3}
+    Prefab: {fileID: 1016811032931024656, guid: 623c259de928abe449bf5ee79a7c47d2, type: 3}
     Price: 10000
