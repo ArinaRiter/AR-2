@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InspectRaycast : MonoBehaviour
 {
-     public void InteractWithObject(ManipulationEventData data)
+    public void InteractWithObject(ManipulationEventData data)
     {
         data.ManipulationSource.GetComponent<ObjectController>().ShowObjectName();
     }

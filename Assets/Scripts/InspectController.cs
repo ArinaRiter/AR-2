@@ -18,24 +18,24 @@ public class InspectController : MonoBehaviour
 
     private void Start()
     {
-        objectNameBG.SetActive(false);
-        extraInfoBG.SetActive(false);
+        objectNameBG.SetActive(true);
+        extraInfoBG.SetActive(true);
     }
 
-    private void Update()
-    {
-        if (startTimer)
-        {
-            timer -= Time.deltaTime;
+    //private void Update()
+    //{
+    //    if (startTimer)
+    //    {
+    //        timer -= Time.deltaTime;
 
-            if (timer <= 0)
-            {
-                timer = 0;
-                ClearAditionalInfo();
-                startTimer = false;
-            }
-        }
-    }
+    //        if (timer <= 0)
+    //        {
+    //            timer = 0;
+    //            ClearAditionalInfo();
+    //            startTimer = false;
+    //        }
+    //    }
+    //}
 
     public void ShowName(string objectName)
     {
@@ -51,8 +51,6 @@ public class InspectController : MonoBehaviour
 
     public void ShowAdditionalInfo(string newInfo)
     {
-        timer = onScreenTimer;
-        startTimer = true;
         extraInfoBG.SetActive(true);
         extraInfoUI.text = newInfo;
     }
