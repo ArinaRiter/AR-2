@@ -16,18 +16,33 @@ public class BookAnimator : MonoBehaviour
     }
     public void NextPage_1()
     {
-        TitleGroup_2.SetActive(false);
-        animator.SetBool("Next2", false);
         animator.SetBool("Next1", true);
-        TitleGroup_1.SetActive(true);
-
+        if (animator.GetBool("IsOpened"))
+        {
+            TitleGroup_2.SetActive(false);
+            animator.SetBool("Next2", false);
+            TitleGroup_1.SetActive(true);
+            gameObject.GetComponent<MagicCardsController>().MagicCards();
+        }
+        else
+        {
+            animator.SetBool("Next1", false);
+        }
     }
     public void NextPage_2()
     {
-        TitleGroup_1.SetActive(false);
-        animator.SetBool("Next1", false);
         animator.SetBool("Next2", true);
-        TitleGroup_2.SetActive(true);
+        if (animator.GetBool("IsOpened"))
+        {
+            TitleGroup_1.SetActive(false);
+            animator.SetBool("Next1", false);
+            TitleGroup_2.SetActive(true);
+            gameObject.GetComponent<MagicCardsController>().MagicCards();
+        }
+        else
+        {
+            animator.SetBool("Next2", false);
+        }
     }
     public void CloseBook()
     {

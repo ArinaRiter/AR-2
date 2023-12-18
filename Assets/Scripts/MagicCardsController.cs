@@ -74,11 +74,9 @@ public class MagicCardsController : MonoBehaviour
     {
         IsSelected = false;
         selectCard.GetComponent<Renderer>().material.color = color;
-        cards.GetComponent<CardsMixed>().CardsMix(-90);
+        cards.GetComponent<CardsMixed>().CardsMix(-1);
         ClearAditionalInfo();
         buttonComplete.SetActive(false);
-        //функция по перевороту карт на 180
         gameObject.GetComponent<BookAnimator>().CloseBook();
     }
-
 }
