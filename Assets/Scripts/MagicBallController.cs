@@ -6,14 +6,22 @@ using UnityEngine.UI;
 
 public class MagicBallController : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator ballAnimator;
     [SerializeField] private GameObject title;
+    [SerializeField] private TextMeshProUGUI extraInfoUI;
+    [SerializeField] private GameObject extraInfoBG;
+    [SerializeField] private TextMeshProUGUI _text;
     private int count;
     private string answer;
 
+    public void MagicBall()
+    {
+        extraInfoBG.SetActive(true);
+        extraInfoUI.text = _text.text;
+    }
     public void TellMe()
     {
-        animator.SetBool("IsLighting", true);
+        ballAnimator.SetBool("IsLighting", true);
         title.SetActive(true);
         count = Random.Range(0, 5);
         switch (count)
@@ -31,16 +39,18 @@ public class MagicBallController : MonoBehaviour
                 answer = "Не уверен";
                 break;
             default:
-                answer = "Одзначно стоит";
+                answer = "Одзначно да";
                 break;
 
         }
         title.GetComponent<TextMeshPro>().text = answer;
     }
-    public void ThankYou()
+    public void Completing()
     {
-        animator.SetBool("IsLighting", false);
+        ballAnimator.SetBool("IsLighting", false);
         title.SetActive(false);
+        extraInfoBG.SetActive(false);
+        extraInfoUI.text = "";
     }
 
 }

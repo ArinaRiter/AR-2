@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using TMPro;
 using UnityEngine;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
@@ -53,5 +54,6 @@ public class BookAnimator : MonoBehaviour
         animator.SetBool("IsOpened", false);
         animator.SetBool("IsClosed", true);
         animator.SetBool("Idle", true);
+        gameObject.GetComponent<MagicBallController>().Completing();
     }
 }

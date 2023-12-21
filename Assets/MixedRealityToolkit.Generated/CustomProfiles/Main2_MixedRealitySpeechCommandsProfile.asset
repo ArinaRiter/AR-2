@@ -51,10 +51,3 @@ MonoBehaviour:
       id: 0
       description: None
       axisConstraint: 0
-  - localizationKey: 
-    keyword: Thank You
-    keyCode: 258
-    action:
-      id: 0
-      description: None
-      axisConstraint: 0
