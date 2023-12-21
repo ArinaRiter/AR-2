@@ -16,13 +16,17 @@ public class CardsMixed : MonoBehaviour
             transformList.Add(gameObject.transform.GetChild(i).position);
         }
     }
-    public void CardsMix(float coef)
+    public void CardsMix(bool IsRotate)
     {
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             gameObject.transform.GetChild(i).position = transformList[i];
-            //gameObject.transform.GetChild(i).transform.eulerAngles = new Vector3(coef * 90f, -90f, 90f); 
-            gameObject.transform.GetChild(i).transform.rotation = Quaternion.Euler(180, 0, 0);
+            gameObject.transform.GetChild(i).transform.rotation = Quaternion.Euler(-90, 180, 0);
+            gameObject.transform.GetChild(i).transform.Rotate(180,0,0);
+            if (IsRotate)
+                gameObject.transform.GetChild(i).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            else
+                gameObject.transform.GetChild(i).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {

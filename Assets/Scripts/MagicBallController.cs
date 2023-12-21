@@ -11,6 +11,7 @@ public class MagicBallController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI extraInfoUI;
     [SerializeField] private GameObject extraInfoBG;
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private GameObject _particleSystem;
     private int count;
     private string answer;
 
@@ -21,6 +22,8 @@ public class MagicBallController : MonoBehaviour
     }
     public void TellMe()
     {
+        //ballAnimator.SetBool("IsLighting", true);
+        //title.SetActive(true);
         count = Random.Range(0, 5);
         switch (count)
         {
@@ -41,7 +44,8 @@ public class MagicBallController : MonoBehaviour
                 break;
 
         }
-
+        
+        _particleSystem.SetActive(true);
         title.GetComponent<TextMeshPro>().text = answer;
     }
     public void Completing()
@@ -56,11 +60,11 @@ public class MagicBallController : MonoBehaviour
     {
         ballAnimator.SetBool("IsLighting", true);
         title.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         TellMe();
     }
     public void TellMe2()
     {
-        TimeSkip();
+        StartCoroutine(TimeSkip());
     }
 }
