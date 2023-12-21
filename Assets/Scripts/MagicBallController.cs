@@ -21,8 +21,6 @@ public class MagicBallController : MonoBehaviour
     }
     public void TellMe()
     {
-        ballAnimator.SetBool("IsLighting", true);
-        title.SetActive(true);
         count = Random.Range(0, 5);
         switch (count)
         {
@@ -43,6 +41,7 @@ public class MagicBallController : MonoBehaviour
                 break;
 
         }
+
         title.GetComponent<TextMeshPro>().text = answer;
     }
     public void Completing()
@@ -50,7 +49,18 @@ public class MagicBallController : MonoBehaviour
         ballAnimator.SetBool("IsLighting", false);
         title.SetActive(false);
         extraInfoBG.SetActive(false);
-        extraInfoUI.text = "";
+        extraInfoUI.text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
     }
 
+    public IEnumerator TimeSkip()
+    {
+        ballAnimator.SetBool("IsLighting", true);
+        title.SetActive(true);
+        yield return new WaitForSeconds(5);
+        TellMe();
+    }
+    public void TellMe2()
+    {
+        TimeSkip();
+    }
 }

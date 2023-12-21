@@ -21,7 +21,8 @@ public class CardsMixed : MonoBehaviour
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             gameObject.transform.GetChild(i).position = transformList[i];
-            gameObject.transform.GetChild(i).transform.eulerAngles = new Vector3(coef * 90f, -90f, 90f); 
+            //gameObject.transform.GetChild(i).transform.eulerAngles = new Vector3(coef * 90f, -90f, 90f); 
+            gameObject.transform.GetChild(i).transform.rotation = Quaternion.Euler(180, 0, 0);
         }
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
