@@ -40,7 +40,7 @@ public class MagicBallController : MonoBehaviour
                 answer = "Не уверен";
                 break;
             default:
-                answer = "Одзначно да";
+                answer = "Однозначно да";
                 break;
 
         }
