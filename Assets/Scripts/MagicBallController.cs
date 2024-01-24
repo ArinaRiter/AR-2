@@ -24,7 +24,7 @@ public class MagicBallController : MonoBehaviour
     public void TellMe()
     {
         //ballAnimator.SetBool("IsLighting", true);
-        //title.SetActive(true);
+        title.SetActive(true);
         count = Random.Range(0, 5);
         switch (count)
         {
