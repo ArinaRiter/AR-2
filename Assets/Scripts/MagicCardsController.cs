@@ -29,7 +29,6 @@ public class MagicCardsController : MonoBehaviour
 
     public void MagicCards()
     {
-        ClearAditionalInfo();
         button.SetActive(true);
     }
 
@@ -52,7 +51,6 @@ public class MagicCardsController : MonoBehaviour
                 IsSelected = true;
             }
         }
-       
     }
 
     public void Confirm()
@@ -65,24 +63,18 @@ public class MagicCardsController : MonoBehaviour
         selectCard.GetComponent<ObjectController>().ShowExtraInfo();
         buttonComplete.SetActive(true);
     }
-    void ClearAditionalInfo()
-    {
-        extraInfoBG.SetActive(false);
-        extraInfoUI.text = "";
-        objectNameBG.SetActive(false);
-        objectNameUI.text = "";
-    }
 
     public void Complete()
     {
-        selectCard.transform.transform.Rotate(180, 0, 0);
+        if (selectCard != null)
+        {
+            selectCard.transform.Rotate(180, 0, 0);
+            selectCard.GetComponent<Renderer>().material.color = color;
+        }
+
         IsSelected = false;
-        selectCard.GetComponent<Renderer>().material.color = color;
         cards.GetComponent<CardsMixed>().CardsMix(false);
         extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\nДля взаимодействия с книгой просто произнесите:\n1) OPEN - книга откроется\n2) MAGIC CARDS - откроется раздел Таро\n3) MAGIC BALL - откроется раздел Волшебного Шара\n4)CLOSE - книга закроется";
-        extraInfoBG.SetActive(true);
-        extraInfoUI.text = "����� ������ ���������� �� ������ ����� - ������� ���������� �����\r\n��� �������������� � ������ ������ �����������:\r\n1) OPEN - ����� ���������\r\n2) MAGIC CARDS - ��������� ������ ����\r\n3) MAGIC BALL - ��������� ������ ���������� ����\r\n4)CLOSE - ����� ���������";
         buttonComplete.SetActive(false);
-        gameObject.GetComponent<BookAnimator>().CloseBook();
     }
 }

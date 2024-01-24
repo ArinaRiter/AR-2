@@ -17,8 +17,7 @@ public class MagicBallController : MonoBehaviour
 
     public void MagicBall()
     {
-        extraInfoBG.SetActive(true);
-        extraInfoUI.text = _text.text;
+        extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text = _text.text;
     }
 
     public void TellMe()
@@ -43,7 +42,6 @@ public class MagicBallController : MonoBehaviour
             default:
                 answer = "Однозначно да";
                 break;
-
         }
 
         _particleSystem.SetActive(true);
@@ -55,7 +53,6 @@ public class MagicBallController : MonoBehaviour
         ballAnimator.SetBool("IsLighting", false);
         title.SetActive(false);
         extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
-            "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
     }
 
     public IEnumerator TimeSkip()
