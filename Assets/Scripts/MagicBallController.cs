@@ -28,19 +28,19 @@ public class MagicBallController : MonoBehaviour
         switch (count)
         {
             case 1:
-                answer = "Да";
+                answer = "Р”Р°";
                 break;
             case 2:
-                answer = "Нет";
+                answer = "РќРµС‚";
                 break;
             case 3:
-                answer = "Духи ответят позже";
+                answer = "Р”СѓС…Рё РѕС‚РІРµС‚СЏС‚ РїРѕР·Р¶Рµ";
                 break;
             case 4:
-                answer = "Не уверен";
+                answer = "РќРµ СѓРІРµСЂРµРЅ";
                 break;
             default:
-                answer = "Однозначно да";
+                answer = "РћРґРЅРѕР·РЅР°С‡РЅРѕ РґР°";
                 break;
 
         }
@@ -52,8 +52,8 @@ public class MagicBallController : MonoBehaviour
     {
         ballAnimator.SetBool("IsLighting", false);
         title.SetActive(false);
-        extraInfoBG.SetActive(false);
-        extraInfoUI.text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
+        extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text =
+            "Р§С‚РѕР±С‹ РїСЂРѕР№С‚Рё РёРЅСЃС‚СЂСѓРєС‚Р°Р¶ РїРѕ С‚РµРјРЅРѕР№ РјР°РіРёРё - РёР·СѓС‡РёС‚Рµ РјР°РіРёС‡РµСЃРєСѓСЋ РєРЅРёРіСѓ\r\nР”Р»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РєРЅРёРіРѕР№ РїСЂРѕСЃС‚Рѕ РїСЂРѕРёР·РЅРµСЃРёС‚Рµ:\r\n1) OPEN - РєРЅРёРіР° РѕС‚РєСЂРѕРµС‚СЃСЏ\r\n2) MAGIC CARDS - РѕС‚РєСЂРѕРµС‚СЃСЏ СЂР°Р·РґРµР» РўР°СЂРѕ\r\n3) MAGIC BALL - РѕС‚РєСЂРѕРµС‚СЃСЏ СЂР°Р·РґРµР» Р’РѕР»С€РµР±РЅРѕРіРѕ РЁР°СЂР°\r\n4)CLOSE - РєРЅРёРіР° Р·Р°РєСЂРѕРµС‚СЃСЏ";
     }
 
     public IEnumerator TimeSkip()
