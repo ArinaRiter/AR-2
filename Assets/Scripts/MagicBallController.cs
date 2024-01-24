@@ -20,6 +20,7 @@ public class MagicBallController : MonoBehaviour
         extraInfoBG.SetActive(true);
         extraInfoUI.text = _text.text;
     }
+
     public void TellMe()
     {
         //ballAnimator.SetBool("IsLighting", true);
@@ -44,15 +45,16 @@ public class MagicBallController : MonoBehaviour
                 break;
 
         }
-        
+
         _particleSystem.SetActive(true);
         title.GetComponent<TextMeshPro>().text = answer;
     }
+
     public void Completing()
     {
         ballAnimator.SetBool("IsLighting", false);
         title.SetActive(false);
-        extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text =
+        extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
             "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
     }
 
@@ -63,6 +65,8 @@ public class MagicBallController : MonoBehaviour
         yield return new WaitForSeconds(7);
         TellMe();
     }
+
+    [ContextMenu("Tell me")]
     public void TellMe2()
     {
         StartCoroutine(TimeSkip());

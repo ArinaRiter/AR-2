@@ -26,11 +26,13 @@ public class MagicCardsController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+
     public void MagicCards()
     {
         ClearAditionalInfo();
         button.SetActive(true);
     }
+
     public void InteractWithCard(ManipulationEventData data)
     {
         if (animator.GetBool("Next1"))
@@ -52,6 +54,7 @@ public class MagicCardsController : MonoBehaviour
         }
        
     }
+
     public void Confirm()
     {
         confirmation.SetActive(false);

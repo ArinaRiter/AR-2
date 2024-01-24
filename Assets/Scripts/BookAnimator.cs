@@ -9,11 +9,15 @@ public class BookAnimator : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject TitleGroup_1;
     [SerializeField] private GameObject TitleGroup_2;
+    
+    [ContextMenu("OpenBook")]
     public void OpenBook()
     {
         animator.SetBool("IsClosed", false);
         animator.SetBool("IsOpened", true);
     }
+    
+    [ContextMenu("Magic Cards")]
     public void NextPage_1()
     {
         animator.SetBool("Next1", true);
@@ -29,6 +33,8 @@ public class BookAnimator : MonoBehaviour
             animator.SetBool("Next1", false);
         }
     }
+    
+    [ContextMenu("Magic Ball")]
     public void NextPage_2()
     {
         animator.SetBool("Next2", true);
@@ -44,6 +50,8 @@ public class BookAnimator : MonoBehaviour
             animator.SetBool("Next2", false);
         }
     }
+    
+    [ContextMenu("CloseBook")]
     public void CloseBook()
     {
         TitleGroup_1.SetActive(false);
