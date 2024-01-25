@@ -26,11 +26,12 @@ public class MagicCardsController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+
     public void MagicCards()
     {
-        ClearAditionalInfo();
         button.SetActive(true);
     }
+
     public void InteractWithCard(ManipulationEventData data)
     {
         if (animator.GetBool("Next1"))
@@ -50,8 +51,8 @@ public class MagicCardsController : MonoBehaviour
                 IsSelected = true;
             }
         }
-       
     }
+
     public void Confirm()
     {
         confirmation.SetActive(false);
@@ -62,24 +63,18 @@ public class MagicCardsController : MonoBehaviour
         selectCard.GetComponent<ObjectController>().ShowExtraInfo();
         buttonComplete.SetActive(true);
     }
-    void ClearAditionalInfo()
-    {
-        extraInfoBG.SetActive(false);
-        extraInfoUI.text = "";
-        objectNameBG.SetActive(false);
-        objectNameUI.text = "";
-    }
 
     public void Complete()
     {
-        selectCard.transform.transform.Rotate(180, 0, 0);
+        if (selectCard != null)
+        {
+            selectCard.transform.Rotate(180, 0, 0);
+            selectCard.GetComponent<Renderer>().material.color = color;
+        }
+
         IsSelected = false;
-        selectCard.GetComponent<Renderer>().material.color = color;
         cards.GetComponent<CardsMixed>().CardsMix(false);
-        ClearAditionalInfo();
-        extraInfoBG.SetActive(true);
-        extraInfoUI.text = "Чтобы пройти инструктаж по темной магии - изучите магическую книгу\r\nДля взаимодействия с книгой просто произнесите:\r\n1) OPEN - книга откроется\r\n2) MAGIC CARDS - откроется раздел Таро\r\n3) MAGIC BALL - откроется раздел Волшебного Шара\r\n4)CLOSE - книга закроется";
+        extraInfoBG.GetComponentInChildren<TextMeshProUGUI>().text = "Р§С‚РѕР±С‹ РїСЂРѕР№С‚Рё РёРЅСЃС‚СЂСѓРєС‚Р°Р¶ РїРѕ С‚РµРјРЅРѕР№ РјР°РіРёРё - РёР·СѓС‡РёС‚Рµ РјР°РіРёС‡РµСЃРєСѓСЋ РєРЅРёРіСѓ\nР”Р»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РєРЅРёРіРѕР№ РїСЂРѕСЃС‚Рѕ РїСЂРѕРёР·РЅРµСЃРёС‚Рµ:\n1) OPEN - РєРЅРёРіР° РѕС‚РєСЂРѕРµС‚СЃСЏ\n2) MAGIC CARDS - РѕС‚РєСЂРѕРµС‚СЃСЏ СЂР°Р·РґРµР» РўР°СЂРѕ\n3) MAGIC BALL - РѕС‚РєСЂРѕРµС‚СЃСЏ СЂР°Р·РґРµР» Р’РѕР»С€РµР±РЅРѕРіРѕ РЁР°СЂР°\n4)CLOSE - РєРЅРёРіР° Р·Р°РєСЂРѕРµС‚СЃСЏ";
         buttonComplete.SetActive(false);
-        gameObject.GetComponent<BookAnimator>().CloseBook();
     }
 }
