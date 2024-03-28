@@ -9,20 +9,18 @@ public class BookAnimator : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject TitleGroup_1;
     [SerializeField] private GameObject TitleGroup_2;
-    
-    [ContextMenu("OpenBook")]
     public void OpenBook()
     {
         animator.SetBool("IsClosed", false);
         animator.SetBool("IsOpened", true);
     }
-    
-    [ContextMenu("Magic Cards")]
     public void NextPage_1()
     {
         animator.SetBool("Next1", true);
         if (animator.GetBool("IsOpened") && !animator.GetBool("Next2"))
         {
+            TitleGroup_2.SetActive(false);
+            //animator.SetBool("Next2", false);
             TitleGroup_1.SetActive(true);
             gameObject.GetComponent<MagicCardsController>().MagicCards();
         }
@@ -31,14 +29,14 @@ public class BookAnimator : MonoBehaviour
             animator.SetBool("Next1", false);
         }
     }
-    
-    [ContextMenu("Magic Ball")]
     public void NextPage_2()
     {
         animator.SetBool("Next2", true);
         if (animator.GetBool("IsOpened") && !animator.GetBool("Next1"))
         {
             TitleGroup_1.SetActive(false);
+            //animator.SetBool("Next1", false);
+            TitleGroup_2.SetActive(true);
             gameObject.GetComponent<MagicBallController>().MagicBall();
         }
         else
@@ -46,8 +44,6 @@ public class BookAnimator : MonoBehaviour
             animator.SetBool("Next2", false);
         }
     }
-    
-    [ContextMenu("CloseBook")]
     public void CloseBook()
     {
         TitleGroup_1.SetActive(false);
@@ -58,6 +54,5 @@ public class BookAnimator : MonoBehaviour
         animator.SetBool("IsClosed", true);
         animator.SetBool("Idle", true);
         gameObject.GetComponent<MagicBallController>().Completing();
-        gameObject.GetComponent<MagicCardsController>().Complete();
     }
 }
